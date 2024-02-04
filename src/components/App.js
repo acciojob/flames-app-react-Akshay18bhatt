@@ -1,16 +1,16 @@
-import React, {Component, useState} from "react";
-import '../styles/App.css';
+import React,{useState} from "react";
+import RelationForm from "./RelationForm";
+import "../styles/App.css"
 
-class App extends Component {
-    render() {
+const App= ()=>{
 
-        return(
-            <div id="main">
-               {/* Do not remove the main div */}
-            </div>
-        )
-    }
+    const [answer,setAnswer] = useState("");
+    return(
+        <div>
+            <RelationForm setAnswer={setAnswer} />
+            <h3 data-testid="answer">{answer}</h3>
+        </div>
+    )
 }
 
-
-export default App;
+export default App
