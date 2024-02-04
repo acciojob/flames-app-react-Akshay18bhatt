@@ -2,8 +2,9 @@ import React,{useState} from "react";
 
 
 
-const RelationForm= ({setAnswer})=>{
+const RelationForm= ()=>{
 
+    const [answer,setAnswer] = useState("");
     const [firstName, setFirstName] = useState("");
     const [secondName, setSecondName] = useState("");
 
@@ -68,17 +69,18 @@ const RelationForm= ({setAnswer})=>{
         
         <div>
             <input data-testid="input1" type="text" placeholder="First Name"
-                onChange={(e)=>{setFirstName(e.target.value)}} value={firstName}
+                onChange={(e)=>{setFirstName(e.target.value)}} value={firstName} name="name1"
             >
 
             </input>
             <input data-testid="input2" type="text" placeholder="Last Name"
-                onChange={(e)=>{setSecondName(e.target.value)}} value={secondName}
+                onChange={(e)=>{setSecondName(e.target.value)}} value={secondName} name="name2"
             >
 
             </input>
             <button onClick={checkRelation} data-testid="calculate_relationship">Calculate Relationship Future</button>
             <button data-testid="clear" onClick={clearAll}>Clear</button>
+            <h3 data-testid="answer">{answer}</h3>
         </div>
     )
 }
