@@ -20,9 +20,9 @@ const RelationForm= ()=>{
             alert("Please Enter valid input");
             return;
         }
-        let arr1= firstName.toLowerCase().trim().split("");
-        let arr2= secondName.toLowerCase().trim().split("");
-        // console.log(arr1,arr2);
+        let arr1= firstName.trim().split("");
+        let arr2= secondName.trim().split("");
+        console.log(arr1,arr2);
 
         for(let i=0;i<arr1.length;i++){
 
